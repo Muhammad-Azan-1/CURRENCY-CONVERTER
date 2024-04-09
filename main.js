@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 let currencies = {
@@ -34,4 +35,4 @@ let currency = await inquirer.prompt([
 ]);
 let amount_to_Dollar = currency.amount / currencies[currency.from]; //inside object currencies square brackets [] we use currency.from,to access the value of what ever user select in currency.from
 let covereted_dollar_to_desire_currency = amount_to_Dollar * currencies[currency.to];
-console.log(chalk.green("\n", covereted_dollar_to_desire_currency));
+console.log(chalk.bgGreen("\n", covereted_dollar_to_desire_currency));
